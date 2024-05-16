@@ -1738,6 +1738,7 @@ export class App extends PureComponent<Props, State> {
       appConfig,
       inputsDisabled,
       appPages,
+      navSections,
     } = this.state
     const developmentMode = showDevelopmentOptions(
       this.state.isOwner,
@@ -1875,6 +1876,7 @@ export class App extends PureComponent<Props, State> {
                 formsData={this.state.formsData}
                 appLogo={elements.logo}
                 appPages={appPages}
+                navSections={navSections}
                 onPageChange={this.onPageChange}
                 currentPageScriptHash={currentPageScriptHash}
                 hideSidebarNav={hideSidebarNav || hostHideSidebarNav}
