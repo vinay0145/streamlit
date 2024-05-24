@@ -243,7 +243,7 @@ export class StrategyV2 {
       document.title = title
       this.appNav.hostCommunicationMgr.sendMessageToHost({
         type: "SET_PAGE_TITLE",
-        title,
+        title: currentPage.pageName ?? "",
       })
     }
 
