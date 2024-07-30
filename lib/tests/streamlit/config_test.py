@@ -388,6 +388,7 @@ class ConfigTest(unittest.TestCase):
                 "server.enableArrowTruncation",
                 "server.sslCertFile",
                 "server.sslKeyFile",
+                "server.disconnectedSessionTTL",
                 "ui.hideTopBar",
             ]
         )
