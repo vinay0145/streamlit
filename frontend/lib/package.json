@@ -12,8 +12,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn build:src && yarn build:vendor && yarn build:assets && yarn build:proto && yarn build:lib-dev",
-    "build:prod": "yarn build:src && yarn build:vendor && yarn build:assets && yarn build:proto && yarn build:lib-type-prod",
+    "preinstall": "npx only-allow pnpm",
+    "build": "pnpm run build:src && pnpm run build:vendor && pnpm run build:assets && pnpm run build:proto && pnpm run build:lib-dev",
+    "build:prod": "pnpm run build:src && pnpm run build:vendor && pnpm run build:assets && pnpm run build:proto && pnpm run build:lib-type-prod",
     "build:lib-type-prod": "tsc -p ./tsconfig.prod.json && tsc-alias -p ./tsconfig.prod.json",
     "build:lib-dev": "tsc -p ./tsconfig.json && tsc-alias -p ./tsconfig.json",
     "build:src": "env NODE_ENV=development vite build",
